@@ -94,6 +94,20 @@ function App() {
           </div>
         </section>
 
+        <section className="testimonials-section">
+          <h2 className="testimonials-title">💬 Was unsere Mitglieder sagen</h2>
+          <p className="section-desc">
+            Echte Ergebnisse von echten Menschen. Tritt der Gruppe bei und überzeuge dich selbst.
+          </p>
+          <div className="testimonials-grid">
+            {["/testemunho (1).jpeg", "/testemunho (2).jpeg", "/testemunho (3).jpeg", "/testemunho (4).jpeg"].map((src, i) => (
+              <div key={i} className="testimonial-card" onClick={() => setSelectedImage(src)}>
+                <img src={src} alt={`Testimonio ${i + 1}`} />
+              </div>
+            ))}
+          </div>
+        </section>
+
         <footer className="footer">
           <button onClick={handleRedirect} className="cta-button secondary">
             Jetzt kostenlos der Gruppe beitreten

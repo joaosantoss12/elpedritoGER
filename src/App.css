@@ -314,6 +314,51 @@ h1 {
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   padding-top: 80px;
   margin-top: 60px;
+  text-align: center;
+}
+
+.testimonials-title {
+  color: var(--primary);
+  margin-bottom: 16px;
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+.testimonials-grid {
+  display: grid;
+  gap: 24px;
+  width: 100%;
+  grid-template-columns: 1fr;
+  margin-top: 40px;
+}
+
+@media (min-width: 600px) {
+  .testimonials-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+.testimonial-card {
+  background-color: var(--card-bg);
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: transform 0.3s, border-color 0.3s;
+  cursor: pointer;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(255, 204, 0, 0.45);
+}
+
+.testimonial-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.testimonial-card:hover img {
+  transform: scale(1.03);
 }
 
 .disclaimer {
